@@ -1,0 +1,40 @@
+<div class="min-body container mt-5">
+
+    <div class="row">
+        <div class="col-4 offset-4">
+            <!-- Card -->
+            <div class="card">
+                <!-- Card content -->
+                <div class="card-body text-center">
+                    <!-- Title -->
+                    <h4 class="card-title"> {{ pokemon.name | titlecase }} </h4>
+                    <!-- Imagen -->
+                    <img [src]="pokemon.foto">
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="text-left">
+                                <h6>Tipo:</h6>
+                                <ul>
+                                    <li *ngFor="let tipo of tipos">{{tipo.type.name}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-left">
+                                <h6>Habilidades:</h6>
+
+                                <ul>
+                                    <li *ngFor="let habilidad of habilidades">{{ habilidad.ability.name }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Card -->
+        </div>
+    </div>
+
+</div>

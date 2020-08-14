@@ -1,0 +1,24 @@
+<div class="min-body container mt-5">
+    <div class="row">
+        <div *ngFor="let pokemon of pokemones" class="col-3 mb-5">
+            <!-- Card -->
+            <div class="card">
+                <!-- Card content -->
+                <div class="card-body text-center">
+                    <!-- Title -->
+                    <h4 class="card-title"> {{ pokemon.name | titlecase }} </h4>
+                    <!-- Imagen -->
+                    <img [src]="obtenerImagen(pokemon.url)">
+                    <!-- Button -->
+                    <a (click)="verPokemon(pokemon.name)" class="btn btn-primary">Ver a {{ pokemon.name }} </a>
+                </div>
+
+            </div>
+            <!-- Card -->
+        </div>
+
+    </div>
+
+
+
+</div>
